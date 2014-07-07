@@ -200,7 +200,7 @@ rtnl_route_request(struct relayd_interface *rif, struct relayd_host *host,
 		req.rt.rtm_dst_len = route->mask;
 		if (route->mask)
 			addr = rtnl_add_addr(addr, &pktlen, RTA_DST, route->dest);
-		addr = rtnl_add_addr(addr, &pktlen, RTA_GATEWAY, host->ipaddr);
+		//addr = rtnl_add_addr(addr, &pktlen, RTA_GATEWAY, host->ipaddr);
 	} else {
 		DPRINTF(2, "%s: add host route to "IP_FMT" (%s)\n", ifname,
 			IP_BUF(host->ipaddr), host->rif->ifname);
